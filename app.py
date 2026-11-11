@@ -7,22 +7,16 @@ def home():
     return "Hello Flask"
 
 
-@app.route("/about")
-def about():
-    return "This is about page"
 
+############ URL converter ############
 
-########## dynamic route
+@app.route("/user/<id>") ## except all data type
+def user(id):
+    return f"Hello {id}"
 
-@app.route("/user/<name>")
-def user(name):
-    return f"Hello {name}"
-
-
-@app.route("/employee/<name>/<department>")
-def employee(name,department):
-    return f"Hello {name} {department}"
-
+@app.route("/user_int/<int:id>") ## except only integer data type
+def user_int(id):
+    return f"Hello {id}"
 
 
 

@@ -9,23 +9,18 @@
     
     <!-- Page title -->
     <title>My Website</title>
-    
- 
-    
- 
-    
     <!-- Optional: Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
 <h1>Welcome to my website</h1>
-    {% if is_loged_in %}
+    
+    <h1>Courses</h1>
+    {% for course in courses %}
 
-    <h1>Welcome back</h1>
+    <h2>{{ course }}</h2>
 
-    {% else %}
-    <h1> Please login </h1>
+    {% endfor %}
 
-    {% endif %}
 </body>
 </html>

@@ -13,9 +13,10 @@ app=Flask(__name__)
 
 @app.route("/")
 def home():
-    # is_loged_in=True
-    is_loged_in=False
-    return render_template("index.html",is_loged_in=is_loged_in)
+    courses=["python","Flask","Django","NumPy","Pandas"]
+    
+    
+    return render_template("index.html",courses=courses)
 
 if __name__ =="__main__":
     app.run(debug=True)

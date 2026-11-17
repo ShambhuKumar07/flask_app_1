@@ -10,35 +10,22 @@
     <!-- Page title -->
     <title>My Website</title>
     
-    <!-- Description for SEO -->
-    <meta name="description" content="A brief description of your page">
+ 
     
-    <!-- Optional: Link to CSS -->
-    <link rel="stylesheet" href="styles.css">
+ 
     
     <!-- Optional: Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <!-- Header section -->
-    <header>
-        <h1>Welcome to {{name}}</h1>
-        <h2>Age : {{ age }}</h2>
-        <h2>City : {{ city }}</h2>
- 
-    </header>
+<h1>Welcome to my website</h1>
+    {% if is_loged_in %}
 
-    <!-- Main content -->
-    <main>
-        <p>This is a starter HTML template.</p>
-    </main>
+    <h1>Welcome back</h1>
 
-    <!-- Footer section -->
-    <footer>
-        <p>&copy; 2026 My Website</p>
-    </footer>
+    {% else %}
+    <h1> Please login </h1>
 
-    <!-- Optional: JavaScript -->
-    <script src="script.js"></script>
+    {% endif %}
 </body>
 </html>
